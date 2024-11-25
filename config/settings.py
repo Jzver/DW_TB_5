@@ -128,6 +128,18 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 SIMPLE_JWT = {
+    """
+    Конфигурация для библиотеки Simple JWT.
+
+    ACCESS_TOKEN_LIFETIME: 
+        Время жизни access-токена. Установлено на 60 минут.
+
+    REFRESH_TOKEN_LIFETIME: 
+        Время жизни refresh-токена. Установлено на 1 день.
+
+    Эти настройки определяют, как долго пользователи могут оставаться аутентифицированными 
+    и когда им нужно будет обновить свои токены для продолжения доступа к защищенным ресурсам.
+    """
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
