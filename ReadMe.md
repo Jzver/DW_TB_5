@@ -6,8 +6,9 @@
 1. Установите Git и Docker
 2. Клонировать репозиторий. https://github.com/Jzver/DW_TB_5
 3. Создайте и заполнить файл .env своими данными.
-4. Запустите терминал и выполните команды: docker-compose build  , docker-compose up
-5. Если требуется доступ к админке, выполните команду: docker-compose exec app python manage.py csu (Создает супер пользователя email="admin@gmail.com"  password="22092013")
+4. Установить зависимости: pip install -r requirements.txt
+5. Запустите терминал и выполните команды: docker-compose build  , docker-compose up , примените миграции docker-compose exec web python manage.py migrate
+6. Если требуется доступ к админке, выполните команду: docker-compose exec app python manage.py csu (Создает супер пользователя email="admin@gmail.com"  password="22092013")
 
 ### CRUD URL
 - [POST] http://localhost:8000/employees/create/ - Создание юзера.
